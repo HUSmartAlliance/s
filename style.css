@@ -5,6 +5,73 @@
     font-family: "Segoe UI", Arial, sans-serif;
 }
 
+/* ===== TEAM GRID ===== */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: #111;
+  padding: 22px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 30px rgba(0, 194, 255, 0.35);
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #00c2ff;
+}
+
+.card p {
+  font-size: 14px;
+  color: #cfcfcf;
+  line-height: 1.5;
+}
+
+/* ===== BUTTON ===== */
+.card-btn {
+  margin-top: 18px;
+  align-self: flex-start;
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #00c2ff, #0077ff);
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover .card-btn {
+  transform: scale(1.06);
+  box-shadow: 0 6px 18px rgba(0, 194, 255, 0.6);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+  .card h3 {
+    font-size: 16px;
+  }
+  .card p {
+    font-size: 13px;
+  }
+}
+
+
 body {
     background: #f5f5f5;
     color: #222;
@@ -110,3 +177,4 @@ footer {
         margin: 8px 0;
     }
 }
+
